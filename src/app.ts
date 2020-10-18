@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { Application } from 'express'
 import dotenv from 'dotenv'
 import { routerV1 } from './routes/v1/parse'
 import { routerV2 } from './routes/v2/parse'
@@ -6,7 +6,7 @@ import { routerV2 } from './routes/v2/parse'
 // Load Config
 dotenv.config({ path: './config/config.env' })
 
-const app = express()
+const app: Application = express()
 
 // Body Parser
 app.use(express.json())
